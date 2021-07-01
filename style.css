@@ -1,0 +1,88 @@
+body{
+   
+   
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: rgb(0, 255, 221);
+}
+.card{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 210px;
+    grid-template-areas: "image" "text" "stat";
+
+    font-family: roboto;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0,0.9);
+    text-align: center;
+
+    transition: 0.5s ease ;
+    cursor: pointer;
+}
+ .card_img{
+    grid-area: image;
+    background: url("image/flwr.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+
+
+}
+ .card_text{
+     grid-area: text;
+     margin: 25px;
+
+ }
+ .card_text .date{
+     color:rgba(243, 57, 150, 0.925);
+     font-size: 15px;
+ }
+ .card_text h1{
+  margin-top: 0px;
+     font-size: 28px;
+ }
+ .card_text p{
+     color: silver;
+     font-size: 15px;
+     font-weight: 300;
+ }
+ .card_stat{
+    margin-top: 100px;
+     grid-area: stat;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 1fr;
+     border-bottom-left-radius: 15px;
+     border-bottom-right-radius: 15px;
+     background: rgb(241, 7, 171);
+
+ }
+ .card_stat .stat{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction:column;
+    padding: 10px;
+     color: white;
+ }
+ .card_stat .type{
+     font-size: 11px;
+     font-weight: 300;
+     text-transform: uppercase;
+     padding-bottom: 90px;
+ }
+ .card_stat .value{
+     font-size: 22px;
+     font-weight: 500px;
+ }
+ .card_stat .border{
+    
+     border-left:1px solid rgb(248, 24, 129) ;
+     border-right: 1px solid rgb(248, 24, 129) ;
+ }
+.card:hover{
+    transform: scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.925);
+}
